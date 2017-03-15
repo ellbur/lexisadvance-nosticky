@@ -1,0 +1,21 @@
+{
+    "name": "No sticky headers for LexisAdvance website",
+	"description": "Makes the sticky headers on the LexisAdvance website not be sticky",
+	"version": "1.0.0",
+	"author": "Owen Healy <owenehealy@gmail.com>",
+    "manifest_version": 2,
+    "permissions": [
+		"storage",
+        "https://advance.lexis.com/*",
+        "http://advance.lexis.com/*"
+    ],
+    "content_scripts": [
+		{
+			"matches": ["https://advance.lexis.com/*", "http://advance.lexis.com/*"],
+			"js": ["third-party/jquery-3.1.1.min.js", "contentscript.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"nosticky.css"
+	]
+}
